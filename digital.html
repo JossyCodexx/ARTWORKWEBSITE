@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/digital.css">
+  <title>Digital Art - ArtistryHub</title>
+  <style>
+    
+
+
+
+    /* Hero Slideshow */
+    .hero {
+      position: relative;
+      height: 60vh;
+      overflow: hidden;
+    }
+
+    .slides {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+
+    .slides img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+
+    .slides img.active {
+      opacity: 1;
+    }
+
+    .hero-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+      text-align: center;
+      background: rgba(0,0,0,0.5);
+      padding: 20px 40px;
+      border-radius: 10px;
+    }
+
+    .hero-text h1 {
+      font-size: 48px;
+      font-weight: bold;
+    }
+
+    /* Digital Art Section */
+    .digital {
+      max-width: 1200px;
+      margin: 50px auto;
+      padding: 0 20px;
+    }
+
+    .digital h2 {
+      text-align: center;
+      font-size: 36px;
+      margin-bottom: 30px;
+      color: #ff5c5c;
+    }
+
+    .digital-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .digital-card {
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .digital-card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+
+    .digital-card h3 {
+      padding: 15px;
+      font-size: 20px;
+      color: #333;
+    }
+
+    .digital-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+    }
+
+  </style>
+</head>
+<body>
+
+ 
+<header class="navbar-header">
+  <div class="navbar">
+    <a href="index.html" class="logo">
+      <img src="./images/logo.png" alt="ArtistryHub Logo">
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li class="dropdown">
+        <a href="categories.html">Categories ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="paintings.html">Paintings</a></li>
+          <li><a href="artwork.html">Artwork</a></li>
+          <li><a href="digital.html">Digital Art</a></li>
+          <li><a href="sculptures.html">Sculptures</a></li>
+          <li><a href="products.html">Products</a></li>
+        </ul>
+      </li>
+      <li><a href="artists.html">Artists</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="login.html">Login</a></li>
+     
+    </ul>
+
+    <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+  </div>
+</header>
+
+  <!-- Hero Section with Slideshow -->
+  <section class="hero">
+    <div class="slides">
+      <img src="./images/digital1.jpg" class="active" alt="Digital Art 1">
+      <img src="./images/digital2.jpg" alt="Digital Art 2">
+      <img src="./images/digital3.jpg" alt="Digital Art 3">
+    </div>
+    <div class="hero-text">
+      <h1>Digital Art</h1>
+    </div>
+  </section>
+<!-- Digital Art Showcase -->
+<section class="digital">
+  <h2>Explore Our Digital Creations</h2>
+  <div class="digital-grid">
+
+    <div class="digital-card">
+      <img src="./images/digital-card1.jpg" alt="Digital Artwork 1">
+      <h3>Futuristic Dreams</h3>
+      <a href="products.html?id=2" class="view-product">View Product</a>
+    </div>
+
+    <div class="digital-card">
+      <img src="./images/digital-card2.jpg" alt="Digital Artwork 2">
+      <h3>Cyber Galaxy</h3>
+      <a href="products.html?id=3" class="view-product">View Product</a>
+    </div>
+
+    <div class="digital-card">
+      <img src="./images/digital-card3.jpg" alt="Digital Artwork 3">
+      <h3>Abstract Flow</h3>
+      <a href="products.html?id=4" class="view-product">View Product</a>
+    </div>
+
+    <div class="digital-card">
+      <img src="./images/digital-card4.jpg" alt="Digital Artwork 4">
+      <h3>Virtual Realities</h3>
+      <a href="products.html?id=5" class="view-product">View Product</a>
+    </div>
+
+    <div class="digital-card">
+      <img src="./images/digital-card5.jpg" alt="Digital Artwork 5">
+      <h3>Neon Dreams</h3>
+      <a href="products.html?id=6" class="view-product">View Product</a>
+    </div>
+
+    <div class="digital-card">
+      <img src="./images/digital-card6.jpg" alt="Digital Artwork 6">
+      <h3>Glitch Universe</h3>
+      <a href="products.html?id=7" class="view-product">View Product</a>
+    </div>
+
+    <div class="digital-card">
+      <img src="./images/digital-card7.jpg" alt="Digital Artwork 7">
+      <h3>Pixel Storm</h3>
+      <a href="products.html?id=8" class="view-product">View Product</a>
+    </div>
+
+    <div class="digital-card">
+      <img src="./images/digital-card8.jpg" alt="Digital Artwork 8">
+      <h3>Neural Visions</h3>
+      <a href="products.html?id=9" class="view-product">View Product</a>
+    </div>
+
+    <div class="digital-card">
+      <img src="./images/digital-card9.jpg" alt="Digital Artwork 9">
+      <h3>Virtual Sunset</h3>
+      <a href="products.html?id=10" class="view-product">View Product</a>
+    </div>
+
+    <div class="digital-card">
+      <img src="./images/digital-card10.jpg" alt="Digital Artwork 10">
+      <h3>Crystal Code</h3>
+      <a href="products.html?id=11" class="view-product">View Product</a>
+    </div>
+
+    <div class="digital-card">
+      <img src="./images/digital-card11.jpg" alt="Digital Artwork 11">
+      <h3>Neon Matrix</h3>
+      <a href="products.html?id=12" class="view-product">View Product</a>
+    </div>
+
+    <div class="digital-card">
+      <img src="./images/digital-card12.jpg" alt="Digital Artwork 12">
+      <h3>Galaxy Flow</h3>
+      <a href="products.html?id=13" class="view-product">View Product</a>
+    </div>
+
+    <div class="digital-card">
+      <img src="./images/digital-card13.jpg" alt="Digital Artwork 13">
+      <h3>Dream Network</h3>
+      <a href="products.html?id=14" class="view-product">View Product</a>
+    </div>
+
+    <div class="digital-card">
+      <img src="./images/digital-card14.jpg" alt="Digital Artwork 14">
+      <h3>Infinity Lights</h3>
+      <a href="products.html?id=15" class="view-product">View Product</a>
+    </div>
+
+    <div class="digital-card">
+      <img src="./images/digital-card15.jpg" alt="Digital Artwork 15">
+      <h3>Cyber Ocean</h3>
+      <a href="products.html?id=16" class="view-product">View Product</a>
+    </div>
+
+    <div class="digital-card">
+      <img src="./images/digital-card16.jpg" alt="Digital Artwork 16">
+      <h3>Shadow Circuit</h3>
+      <a href="products.html?id=17" class="view-product">View Product</a>
+    </div>
+
+    <div class="digital-card">
+      <img src="./images/digital-card17.jpg" alt="Digital Artwork 17">
+      <h3>Virtual Dreamscape</h3>
+      <a href="products.html?id=18" class="view-product">View Product</a>
+    </div>
+
+    <div class="digital-card">
+      <img src="./images/digital-card18.jpg" alt="Digital Artwork 18">
+      <h3>Lightstorm</h3>
+      <a href="products.html?id=19" class="view-product">View Product</a>
+    </div>
+
+    <div class="digital-card">
+      <img src="./images/digital-card19.jpg" alt="Digital Artwork 19">
+      <h3>Cyber Jungle</h3>
+      <a href="products.html?id=20" class="view-product">View Product</a>
+    </div>
+
+    <div class="digital-card">
+      <img src="./images/digital-card20.jpg" alt="Digital Artwork 20">
+      <h3>Quantum Flow</h3>
+      <a href="products.html?id=21" class="view-product">View Product</a>
+    </div>
+
+  </div>
+</section>
+
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 ArtistryHub. All Rights Reserved.
+  </footer>
+
+  <!-- Slideshow Script -->
+  <script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slides img');
+
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.classList.remove('active');
+        if (i === index) slide.classList.add('active');
+      });
+    }
+
+    function nextSlide() {
+      currentSlide = (currentSlide + 1) % slides.length;
+      showSlide(currentSlide);
+    }
+
+    setInterval(nextSlide, 4000); // changes every 4 seconds
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Footer Section -->
+<footer class="footer">
+  <div class="footer-container">
+    <!-- Brand Info -->
+    <div class="footer-col">
+      <h2 class="footer-logo">Artistry<span>Hub</span></h2>
+      <p>Discover, collect, and celebrate creativity.  
+      Your gateway to timeless artworks and digital masterpieces.</p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-pinterest"></i></a>
+      </div>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-col">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="products.html">Shop Artworks</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Customer Support -->
+    <div class="footer-col">
+      <h3>Customer Support</h3>
+      <ul>
+        <li><a href="#">FAQs</a></li>
+        <li><a href="#">How It Works</a></li>
+        <li><a href="#">Payment & Shipping</a></li>
+        <li><a href="#">Terms & Conditions</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact Info -->
+    <div class="footer-col">
+      <h3>Contact Us</h3>
+      <p><i class="fas fa-map-marker-alt"></i> 45 Creative Lane, Lagos, Nigeria</p>
+      <p><i class="fas fa-phone-alt"></i> +234 901 234 5678</p>
+      <p><i class="fas fa-envelope"></i> support@artistryhub.com</p>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2025 ArtistryHub. All Rights Reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>

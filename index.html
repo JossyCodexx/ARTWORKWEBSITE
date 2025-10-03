@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ArtistryHub | Home</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <!-- External CSS -->
+  <link rel="stylesheet" href="./css/style.css">
+
+  <style>
+   
+    /* Gallery Section */
+    .section-header {
+      text-align: center;
+      padding: 50px 20px 20px;
+    }
+    .section-header h2 {
+      font-size: 32px;
+      font-weight: 700;
+      color: #333;
+    }
+
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 20px 40px;
+    }
+    .product-card {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+    .product-card:hover {
+      transform: translateY(-5px);
+    }
+    .product-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .product-card h3 {
+      font-size: 20px;
+      margin: 10px;
+      color: #333;
+    }
+    .product-card p {
+      font-size: 14px;
+      margin: 0 10px 10px;
+      color: #555;
+    }
+    .view-product {
+      display: inline-block;
+      margin: 10px;
+      padding: 10px 15px;
+      background: #ff4757;
+      color: #fff;
+      border-radius: 5px;
+      font-size: 14px;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+    .view-product:hover {
+      background: #d63031;
+    }
+
+
+
+
+
+
+
+
+
+
+    /* Footer */
+    .footer {
+      background: #111;
+      color: #ccc;
+      padding: 50px 40px 20px;
+    }
+    .footer-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 30px;
+    }
+    .footer-col h2, .footer-col h3 {
+      color: #fff;
+      margin-bottom: 15px;
+    }
+    .footer-col p, .footer-col ul, .footer-col li, .footer-col a {
+      color: #ccc;
+      font-size: 14px;
+      text-decoration: none;
+      line-height: 1.8;
+    }
+    .social-icons a {
+      display: inline-block;
+      margin-right: 10px;
+      color: #fff;
+      font-size: 18px;
+      transition: color 0.3s;
+    }
+    .social-icons a:hover {
+      color: #ff4757;
+    }
+    .footer-bottom {
+      text-align: center;
+      padding-top: 20px;
+      border-top: 1px solid #333;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<header class="navbar-header">
+  <div class="navbar">
+    <a href="index.html" class="logo">
+      <img src="./images/logo.png" alt="ArtistryHub Logo">
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li class="dropdown">
+        <a href="categories.html">Categories ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="paintings.html">Paintings</a></li>
+          <li><a href="artwork.html">Artwork</a></li>
+          <li><a href="digital.html">Digital Art</a></li>
+          <li><a href="sculptures.html">Sculptures</a></li>
+          <li><a href="products.html">Products</a></li>
+        </ul>
+      </li>
+      <li><a href="artists.html">Artists</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="login.html">Login</a></li>
+     
+    </ul>
+
+    <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+  </div>
+</header>
+
+<!-- Hero Section -->
+<section class="hero">
+  <div class="slides">
+    <img src="./images/hero1.jpg" alt="Artwork Hero 1">
+    <img src="./images/hero2.jpg" alt="Artwork Hero 2">
+    <img src="./images/hero3.jpg" alt="Artwork Hero 3">
+  </div>
+
+  <div class="hero-text">
+    <h1>Welcome to ArtistryHub</h1>
+    <p>Discover timeless artworks and celebrate creativity</p>
+  </div>
+</section>
+
+<!-- Featured Artworks -->
+<section id="gallery" class="section">
+  <div class="section-header">
+    <h2>Featured Artworks</h2>
+  </div>
+  <div class="products-grid">
+    <!-- 20 Product Cards -->
+    <!-- Update images and titles later -->
+    <div class="product-card">
+      <img src="./images/art1.jpg" alt="Artwork 1">
+      <h3>Artwork Title 1</h3>
+      <p>Short description of artwork.</p>
+      <a href="products.html?id=g1" class="view-product">View Product</a>
+    </div>
+
+    <div class="product-card">
+      <img src="./images/art2.jpg" alt="Artwork 2">
+      <h3>Artwork Title 2</h3>
+      <p>Short description of artwork.</p>
+      <a href="products.html?id=g2" class="view-product">View Product</a>
+    </div>
+
+    <div class="product-card">
+      <img src="./images/art3.jpg" alt="Artwork 3">
+      <h3>Artwork Title 3</h3>
+      <p>Short description of artwork.</p>
+      <a href="products.html?id=g3" class="view-product">View Product</a>
+    </div>
+
+    <div class="product-card">
+      <img src="./images/art4.jpg" alt="Artwork 4">
+      <h3>Artwork Title 4</h3>
+      <p>Short description of artwork.</p>
+      <a href="products.html?id=g4" class="view-product">View Product</a>
+    </div>
+
+    <div class="product-card">
+      <img src="./images/art5.jpg" alt="Artwork 5">
+      <h3>Artwork Title 5</h3>
+      <p>Short description of artwork.</p>
+      <a href="products.html?id=g5" class="view-product">View Product</a>
+    </div>
+
+    <div class="product-card">
+      <img src="./images/art6.jpg" alt="Artwork 6">
+      <h3>Artwork Title 6</h3>
+      <p>Short description of artwork.</p>
+      <a href="products.html?id=g6" class="view-product">View Product</a>
+    </div>
+
+    <div class="product-card">
+      <img src="./images/art7.jpg" alt="Artwork 7">
+      <h3>Artwork Title 7</h3>
+      <p>Short description of artwork.</p>
+      <a href="products.html?id=g7" class="view-product">View Product</a>
+    </div>
+
+    <div class="product-card">
+      <img src="./images/art8.jpg" alt="Artwork 8">
+      <h3>Artwork Title 8</h3>
+      <p>Short description of artwork.</p>
+      <a href="products.html?id=g8" class="view-product">View Product</a>
+    </div>
+
+    <div class="product-card">
+      <img src="./images/art9.jpg" alt="Artwork 9">
+      <h3>Artwork Title 9</h3>
+      <p>Short description of artwork.</p>
+      <a href="products.html?id=g9" class="view-product">View Product</a>
+    </div>
+
+    <div class="product-card">
+      <img src="./images/art10.jpg" alt="Artwork 10">
+      <h3>Artwork Title 10</h3>
+      <p>Short description of artwork.</p>
+      <a href="products.html?id=g10" class="view-product">View Product</a>
+    </div>
+
+    <div class="product-card">
+      <img src="./images/art11.jpg" alt="Artwork 11">
+      <h3>Artwork Title 11</h3>
+      <p>Short description of artwork.</p>
+      <a href="products.html?id=g11" class="view-product">View Product</a>
+    </div>
+
+    <div class="product-card">
+      <img src="./images/art12.jpg" alt="Artwork 12">
+      <h3>Artwork Title 12</h3>
+      <p>Short description of artwork.</p>
+      <a href="products.html?id=g12" class="view-product">View Product</a>
+    </div>
+
+    <div class="product-card">
+      <img src="./images/art13.jpg" alt="Artwork 13">
+      <h3>Artwork Title 13</h3>
+      <p>Short description of artwork.</p>
+      <a href="products.html?id=g13" class="view-product">View Product</a>
+    </div>
+
+    <div class="product-card">
+      <img src="./images/art14.jpg" alt="Artwork 14">
+      <h3>Artwork Title 14</h3>
+      <p>Short description of artwork.</p>
+      <a href="products.html?id=g14" class="view-product">View Product</a>
+    </div>
+
+    <div class="product-card">
+      <img src="./images/art15.jpg" alt="Artwork 15">
+      <h3>Artwork Title 15</h3>
+      <p>Short description of artwork.</p>
+      <a href="products.html?id=g15" class="view-product">View Product</a>
+    </div>
+
+    <div class="product-card">
+      <img src="./images/art16.jpg" alt="Artwork 16">
+      <h3>Artwork Title 16</h3>
+      <p>Short description of artwork.</p>
+      <a href="products.html?id=g16" class="view-product">View Product</a>
+    </div>
+
+    <div class="product-card">
+      <img src="./images/art17.jpg" alt="Artwork 17">
+      <h3>Artwork Title 17</h3>
+      <p>Short description of artwork.</p>
+      <a href="products.html?id=g17" class="view-product">View Product</a>
+    </div>
+
+    <div class="product-card">
+      <img src="./images/art18.jpg" alt="Artwork 18">
+      <h3>Artwork Title 18</h3>
+      <p>Short description of artwork.</p>
+      <a href="products.html?id=g18" class="view-product">View Product</a>
+    </div>
+
+    <div class="product-card">
+      <img src="./images/art19.jpg" alt="Artwork 19">
+      <h3>Artwork Title 19</h3>
+      <p>Short description of artwork.</p>
+      <a href="products.html?id=g19" class="view-product">View Product</a>
+    </div>
+
+
+
+    
+    <!-- Video Card -->
+    <div class="painting-card video-card">
+      <video controls poster="./images">
+        <source src="./images/art-video.mp4.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <h3>Art in Motion</h3>
+      <p>A behind-the-scenes look at the creative process.</p>
+      <a href="products.html?id=23" class="view-product">View Product</a>
+    </div>
+</section>
+
+
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <!-- Brand Info -->
+      <div class="footer-col">
+        <h2 class="footer-logo">Artistry<span>Hub</span></h2>
+        <p>Discover, collect, and celebrate creativity.  
+        Your gateway to timeless artworks and digital masterpieces.</p>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-pinterest"></i></a>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="footer-col">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="products.html">Shop Artworks</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Customer Support -->
+      <div class="footer-col">
+        <h3>Customer Support</h3>
+        <ul>
+          <li><a href="#">FAQs</a></li>
+          <li><a href="#">How It Works</a></li>
+          <li><a href="#">Payment & Shipping</a></li>
+          <li><a href="#">Terms & Conditions</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="footer-col">
+        <h3>Contact Us</h3>
+        <p><i class="fas fa-map-marker-alt"></i> 45 Creative Lane, Lagos, Nigeria</p>
+        <p><i class="fas fa-phone-alt"></i> +234 901 234 5678</p>
+        <p><i class="fas fa-envelope"></i> support@artistryhub.com</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2025 ArtistryHub. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+
+
+
+  
+
+ <script src="./Js/index.js"></script>
+</body>
+</html>

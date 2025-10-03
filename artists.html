@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/artists.css">
+  <title>Artists - ArtistryHub</title>
+  <style>
+   
+
+    /* Hero Section */
+    .hero {
+      position: relative;
+      height: 50vh;
+      overflow: hidden;
+    }
+
+    .hero img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+
+    .hero img.active {
+      opacity: 1;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.5);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 10;
+    }
+
+    .hero-overlay h1 {
+      color: #fff;
+      font-size: 48px;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    /* Artists Section */
+    .artists {
+      max-width: 1200px;
+      margin: 50px auto;
+      padding: 0 20px;
+    }
+
+    .artists h2 {
+      text-align: center;
+      font-size: 36px;
+      color: #ff5c5c;
+      margin-bottom: 40px;
+    }
+
+    .artist-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+
+    .artist-card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      overflow: hidden;
+      text-align: center;
+      transition: transform 0.3s;
+    }
+
+    .artist-card:hover {
+      transform: translateY(-8px);
+    }
+
+    .artist-card img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+
+    .artist-card h3 {
+      font-size: 22px;
+      margin: 15px 0 5px;
+      color: #333;
+    }
+
+    .artist-card p {
+      font-size: 16px;
+      color: #666;
+      padding: 0 15px 20px;
+    }
+
+   
+  </style>
+</head>
+<body>
+
+<header class="navbar-header">
+  <div class="navbar">
+    <a href="index.html" class="logo">
+      <img src="./images/logo.png" alt="ArtistryHub Logo">
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li class="dropdown">
+        <a href="categories.html">Categories ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="paintings.html">Paintings</a></li>
+          <li><a href="artwork.html">Artwork</a></li>
+          <li><a href="digital.html">Digital Art</a></li>
+          <li><a href="sculptures.html">Sculptures</a></li>
+          <li><a href="products.html">Products</a></li>
+        </ul>
+      </li>
+      <li><a href="artists.html">Artists</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="login.html">Login</a></li>
+     
+    </ul>
+
+    <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+  </div>
+</header>
+
+  <!-- Hero Section with 3 Image Animation -->
+  <section class="hero">
+    <img src="./images/artists-hero1.jpg" alt="Hero 1" class="active">
+    <img src="./images/artists-hero2.jpg" alt="Hero 2">
+    <img src="./images/artists-hero3.jpg" alt="Hero 3">
+
+    <div class="hero-overlay">
+      <h1>Meet Our Artists</h1>
+    </div>
+  </section>
+<!-- Artists Section -->
+<section class="artists">
+  <h2>Featured Artists</h2>
+  <div class="artist-grid">
+
+    <div class="artist-card">
+      <img src="./images/artist1.jpg" alt="Artist 1">
+      <h3>Emily Carter</h3>
+      <p>Specializes in contemporary abstract paintings that evoke emotion and creativity.</p>
+      <a href="products.html?id=1" class="view-product">View Product</a>
+    </div>
+
+    <div class="artist-card">
+      <img src="./images/artist2.jpg" alt="Artist 2">
+      <h3>David Johnson</h3>
+      <p>A sculptor blending tradition with modern styles to create thought-provoking works.</p>
+      <a href="products.html?id=2" class="view-product">View Product</a>
+    </div>
+
+    <div class="artist-card">
+      <img src="./images/artist3.jpg" alt="Artist 3">
+      <h3>Sophia Lee</h3>
+      <p>Digital artist known for futuristic and colorful illustrations that inspire imagination.</p>
+      <a href="products.html?id=3" class="view-product">View Product</a>
+    </div>
+
+    <div class="artist-card">
+      <img src="./images/artist4.jpg" alt="Artist 4">
+      <h3>Michael Brown</h3>
+      <p>Capturing beauty through photography, specializing in portraits and landscapes.</p>
+      <a href="products.html?id=4" class="view-product">View Product</a>
+    </div>
+
+    <div class="artist-card">
+      <img src="./images/artist5.jpg" alt="Artist 5">
+      <h3>Olivia Green</h3>
+      <p>Mixed media artist combining textures, colors, and unique perspectives.</p>
+      <a href="products.html?id=5" class="view-product">View Product</a>
+    </div>
+
+    <div class="artist-card">
+      <img src="./images/artist6.jpg" alt="Artist 6">
+      <h3>Ethan White</h3>
+      <p>Modern painter focused on cityscapes and architectural designs.</p>
+      <a href="products.html?id=6" class="view-product">View Product</a>
+    </div>
+
+    <div class="artist-card">
+      <img src="./images/artist7.jpg" alt="Artist 7">
+      <h3>Isabella Moore</h3>
+      <p>Watercolor specialist bringing nature and portraits to life.</p>
+      <a href="products.html?id=7" class="view-product">View Product</a>
+    </div>
+
+    <div class="artist-card">
+      <img src="./images/artist8.jpg" alt="Artist 8">
+      <h3>Liam Walker</h3>
+      <p>Street artist mixing graffiti with cultural storytelling.</p>
+      <a href="products.html?id=8" class="view-product">View Product</a>
+    </div>
+
+    <div class="artist-card">
+      <img src="./images/artist9.jpg" alt="Artist 9">
+      <h3>Ava Scott</h3>
+      <p>Illustrator creating fantasy-inspired digital and traditional works.</p>
+      <a href="products.html?id=9" class="view-product">View Product</a>
+    </div>
+
+    <div class="artist-card">
+      <img src="./images/artist10.jpg" alt="Artist 10">
+      <h3>Noah King</h3>
+      <p>Photographer focused on documentary and street photography.</p>
+      <a href="products.html?id=10" class="view-product">View Product</a>
+    </div>
+
+    <div class="artist-card">
+      <img src="./images/artist11.jpg" alt="Artist 11">
+      <h3>Charlotte Young</h3>
+      <p>Sculptor blending realism with abstract interpretations.</p>
+      <a href="products.html?id=11" class="view-product">View Product</a>
+    </div>
+
+    <div class="artist-card">
+      <img src="./images/artist12.jpg" alt="Artist 12">
+      <h3>James Hall</h3>
+      <p>Painter known for vibrant portraits that celebrate human diversity.</p>
+      <a href="products.html?id=12" class="view-product">View Product</a>
+    </div>
+
+    <div class="artist-card">
+      <img src="./images/artist13.jpg" alt="Artist 13">
+      <h3>Amelia Allen</h3>
+      <p>Digital designer creating futuristic, sci-fi, and fantasy art pieces.</p>
+      <a href="products.html?id=13" class="view-product">View Product</a>
+    </div>
+
+    <div class="artist-card">
+      <img src="./images/artist14.jpg" alt="Artist 14">
+      <h3>Benjamin Wright</h3>
+      <p>Specializes in oil painting landscapes inspired by travels worldwide.</p>
+      <a href="products.html?id=14" class="view-product">View Product</a>
+    </div>
+
+    <div class="artist-card">
+      <img src="./images/artist15.jpg" alt="Artist 15">
+      <h3>Grace Hill</h3>
+      <p>Mixed-media installations exploring identity and community.</p>
+      <a href="products.html?id=15" class="view-product">View Product</a>
+    </div>
+
+    <div class="artist-card">
+      <img src="./images/artist16.jpg" alt="Artist 16">
+      <h3>Lucas Adams</h3>
+      <p>Abstract sculptor using recycled materials to spark conversation.</p>
+      <a href="products.html?id=16" class="view-product">View Product</a>
+    </div>
+
+    <div class="artist-card">
+      <img src="./images/artist17.jpg" alt="Artist 17">
+      <h3>Mia Nelson</h3>
+      <p>Portrait artist capturing raw emotions and human essence.</p>
+      <a href="products.html?id=17" class="view-product">View Product</a>
+    </div>
+
+    <div class="artist-card">
+      <img src="./images/artist18.jpg" alt="Artist 18">
+      <h3>Henry Baker</h3>
+      <p>Classic charcoal and pencil sketch artist with modern twists.</p>
+      <a href="products.html?id=18" class="view-product">View Product</a>
+    </div>
+
+    <div class="artist-card">
+      <img src="./images/artist19.jpg" alt="Artist 19">
+      <h3>Ella Perez</h3>
+      <p>Digital illustrator specializing in book and comic art.</p>
+      <a href="products.html?id=19" class="view-product">View Product</a>
+    </div>
+
+    <div class="artist-card">
+      <img src="./images/artist20.jpg" alt="Artist 20">
+      <h3>William Brooks</h3>
+      <p>Contemporary painter exploring surreal and dream-like art styles.</p>
+      <a href="products.html?id=20" class="view-product">View Product</a>
+    </div>
+
+  </div>
+</section>
+
+
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 ArtistryHub. All Rights Reserved.
+  </footer>
+
+  <!-- JavaScript for Hero Animation -->
+  <script>
+    const slides = document.querySelectorAll('.hero img');
+    let current = 0;
+
+    function showNextSlide() {
+      slides[current].classList.remove('active');
+      current = (current + 1) % slides.length;
+      slides[current].classList.add('active');
+    }
+
+    setInterval(showNextSlide, 4000); // Change image every 4s
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Footer Section -->
+<footer class="footer">
+  <div class="footer-container">
+    <!-- Brand Info -->
+    <div class="footer-col">
+      <h2 class="footer-logo">Artistry<span>Hub</span></h2>
+      <p>Discover, collect, and celebrate creativity.  
+      Your gateway to timeless artworks and digital masterpieces.</p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-pinterest"></i></a>
+      </div>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-col">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="products.html">Shop Artworks</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Customer Support -->
+    <div class="footer-col">
+      <h3>Customer Support</h3>
+      <ul>
+        <li><a href="#">FAQs</a></li>
+        <li><a href="#">How It Works</a></li>
+        <li><a href="#">Payment & Shipping</a></li>
+        <li><a href="#">Terms & Conditions</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact Info -->
+    <div class="footer-col">
+      <h3>Contact Us</h3>
+      <p><i class="fas fa-map-marker-alt"></i> 45 Creative Lane, Lagos, Nigeria</p>
+      <p><i class="fas fa-phone-alt"></i> +234 901 234 5678</p>
+      <p><i class="fas fa-envelope"></i> support@artistryhub.com</p>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2025 ArtistryHub. All Rights Reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>

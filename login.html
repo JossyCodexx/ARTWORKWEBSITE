@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <title>Login – ArtistryHub</title>
+  <link rel="stylesheet" href="./css/login.css">
+
+  <style>
+
+    /* Hero Animation */
+    .hero {
+      position: relative;
+      height: 300px;
+      overflow: hidden;
+    }
+    .hero img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      animation: fade 15s infinite;
+    }
+    .hero img:nth-child(1) { animation-delay: 0s; }
+    .hero img:nth-child(2) { animation-delay: 5s; }
+    .hero img:nth-child(3) { animation-delay: 10s; }
+
+    @keyframes fade {
+      0% { opacity: 0; }
+      10% { opacity: 1; }
+      30% { opacity: 1; }
+      40% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+
+
+
+
+
+
+
+
+
+    /* Login Form */
+    .login-container {
+      max-width: 400px;
+      margin: 50px auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    .login-container h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #444;
+    }
+    .login-container label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+    .login-container input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    .login-container button {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      background: #222;
+      color: #fff;
+      font-size: 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .login-container button:hover {
+      background: #444;
+    }
+    .login-container p {
+      text-align: center;
+      margin-top: 15px;
+    }
+    .login-container p a {
+      color: #222;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .login-container p a:hover {
+      text-decoration: underline;
+    }
+    
+  </style>
+</head>
+<body>
+
+<header class="navbar-header">
+  <div class="navbar">
+    <a href="index.html" class="logo">
+      <img src="./images/logo.png" alt="ArtistryHub Logo">
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li class="dropdown">
+        <a href="categories.html">Categories ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="paintings.html">Paintings</a></li>
+          <li><a href="artwork.html">Artwork</a></li>
+          <li><a href="digital.html">Digital Art</a></li>
+          <li><a href="sculptures.html">Sculptures</a></li>
+          <li><a href="products.html">Products</a></li>
+        </ul>
+      </li>
+      <li><a href="artists.html">Artists</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="login.html">Login</a></li>
+     
+    </ul>
+
+    <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+  </div>
+</header>
+
+  <!-- Hero Section with 3 Images Animation -->
+  <section class="hero">
+    <img src="./images/artwork-hero1.jpg" alt="Artwork Slide 1">
+    <img src="./images/artwork-hero2.jpg" alt="Artwork Slide 2">
+    <img src="./images/artwork-hero3.jpg" alt="Artwork Slide 3">
+  </section>
+
+  <!-- Login Form -->
+  <div class="login-container">
+    <h2>Login to ArtistryHub</h2>
+    <form action="dashboard.html" method="POST">
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" required placeholder="Enter your email">
+
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" required placeholder="Enter your password">
+
+      <button type="submit">Login</button>
+
+      <p>Don’t have an account? <a href="register.html">Register here</a></p>
+    </form>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <!-- Brand Info -->
+      <div class="footer-col">
+        <h2 class="footer-logo">Artistry<span>Hub</span></h2>
+        <p>Discover, collect, and celebrate creativity.  
+        Your gateway to timeless artworks and digital masterpieces.</p>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-pinterest"></i></a>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="footer-col">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="products.html">Shop Artworks</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Customer Support -->
+      <div class="footer-col">
+        <h3>Customer Support</h3>
+        <ul>
+          <li><a href="#">FAQs</a></li>
+          <li><a href="#">How It Works</a></li>
+          <li><a href="#">Payment & Shipping</a></li>
+          <li><a href="#">Terms & Conditions</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="footer-col">
+        <h3>Contact Us</h3>
+        <p><i class="fas fa-map-marker-alt"></i> 45 Creative Lane, Lagos, Nigeria</p>
+        <p><i class="fas fa-phone-alt"></i> +234 901 234 5678</p>
+        <p><i class="fas fa-envelope"></i> support@artistryhub.com</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2025 ArtistryHub. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+ <script src="./Js/login.js"></script>
+</body>
+</html>

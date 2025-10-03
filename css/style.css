@@ -1,0 +1,406 @@
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', Arial, sans-serif;
+  background: #f4f4f4;
+}
+
+/* ===== NAVBAR ===== */
+header {
+  width: 100%;
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid #ddd;
+}
+
+.navbar {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0.8rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  height: 50px;
+  width: auto;
+}
+
+/* ===== NAV LINKS ===== */
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.nav-links a {
+  color: #111;
+  text-decoration: none;
+  padding: 0.5rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #007bff;
+}
+
+/* ===== DROPDOWN MENU ===== */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #f9f9f9;
+  min-width: 180px;
+  list-style: none;
+  border-radius: 4px;
+  overflow: hidden;
+  border: 1px solid #ddd;
+  z-index: 100;
+}
+
+.dropdown-menu li a {
+  display: block;
+  padding: 0.7rem 1rem;
+  color: #111;
+  transition: background 0.3s ease;
+}
+
+.dropdown-menu li a:hover {
+  background: #007bff;
+  color: #fff;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* ===== MOBILE MENU TOGGLE ===== */
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  color: #111;
+  cursor: pointer;
+}
+
+
+
+
+
+/* ===== HERO SLIDER ===== */
+.hero {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-slider {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.slide {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  opacity: 0;
+  animation: slideAnimation 15s infinite;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slide:nth-child(1) { animation-delay: 0s; }
+.slide:nth-child(2) { animation-delay: 5s; }
+.slide:nth-child(3) { animation-delay: 10s; }
+
+@keyframes slideAnimation {
+  0% { opacity: 0; }
+  10% { opacity: 1; }
+  30% { opacity: 1; }
+  40% { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+
+
+
+
+
+
+/* Grid layout */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Product & Video cards */
+.product-card,
+.video-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 350px; /* ✅ Makes all cards the same height */
+}
+
+.product-card:hover,
+.video-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Images inside cards */
+.product-card img {
+  width: 100%;
+  height: 180px;   /* ✅ Fixed image height */
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Videos inside cards */
+.video-card video {
+  width: 100%;
+  height: 180px;   /* ✅ Matches image height */
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Titles */
+.product-card h3,
+.video-card h3 {
+  margin: 10px 0 5px;
+  font-size: 18px;
+}
+
+/* Descriptions */
+.product-card p,
+.video-card p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 10px;
+  flex-grow: 1;
+}
+
+/* View Product button */
+.view-product {
+  display: inline-block;
+  padding: 8px 12px;
+  background: #333;
+  color: #fff;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.view-product:hover {
+  background: #555;
+}
+
+
+
+
+/* ===== FOOTER ===== */
+footer {
+  background: #111;
+  color: #fff;
+  padding: 2rem 0 1rem 0;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 2rem;
+  gap: 2rem;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-section h3, .footer-section h4 {
+  margin-bottom: 1rem;
+  color: #ff6600;
+}
+
+.footer-section ul {
+  list-style: none;
+}
+
+.footer-section ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-section a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+  color: #ff6600;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #ddd;
+}
+
+
+
+
+
+
+
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: #fff;
+    flex-direction: column;
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .nav-links.show {
+    max-height: 500px;
+  }
+
+  .nav-links li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .dropdown-menu {
+    position: static;
+    background: #f9f9f9;
+    border-radius: 0;
+    border: none;
+  }
+
+  .dropdown.open .dropdown-menu {
+    display: block;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 60vh;
+  overflow: hidden;
+}
+
+.slides {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.slides img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  animation: fade 12s infinite;
+}
+
+/* Show each image in sequence */
+.slides img:nth-child(1) {
+  animation-delay: 0s;
+}
+.slides img:nth-child(2) {
+  animation-delay: 4s;
+}
+.slides img:nth-child(3) {
+  animation-delay: 8s;
+}
+
+@keyframes fade {
+  0%   { opacity: 0; }
+  10%  { opacity: 1; }
+  30%  { opacity: 1; }
+  40%  { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+
+
+
+
+/* Hero text */
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-align: center;
+  background: rgba(0,0,0,0.5);
+  padding: 20px 40px;
+  border-radius: 10px;
+}
+
+.hero-text h1 {
+  font-size: 48px;
+  font-weight: bold;
+}

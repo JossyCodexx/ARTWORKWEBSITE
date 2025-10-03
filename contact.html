@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/contact.css">
+  <title>Contact - ArtistryHub</title>
+  <style>
+
+
+
+
+
+    /* Hero Slideshow */
+    .hero {
+      position: relative;
+      height: 60vh;
+      overflow: hidden;
+    }
+
+    .slides {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+
+    .slides img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+
+    .slides img.active {
+      opacity: 1;
+    }
+
+    .hero-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+      text-align: center;
+      background: rgba(0,0,0,0.5);
+      padding: 20px 40px;
+      border-radius: 10px;
+    }
+
+    .hero-text h1 {
+      font-size: 48px;
+      font-weight: bold;
+    }
+
+    /* Contact Section */
+    .contact {
+      max-width: 1200px;
+      margin: 50px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 40px;
+    }
+
+    .contact-info {
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .contact-info h2 {
+      margin-bottom: 20px;
+      color: #ff5c5c;
+    }
+
+    .contact-info p {
+      margin-bottom: 15px;
+      font-size: 16px;
+      color: #555;
+    }
+
+    .contact-form {
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .contact-form h2 {
+      margin-bottom: 20px;
+      color: #ff5c5c;
+    }
+
+    .contact-form form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      padding: 12px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+      outline: none;
+    }
+
+    .contact-form button {
+      background: #ff5c5c;
+      color: #fff;
+      border: none;
+      padding: 12px;
+      border-radius: 8px;
+      font-size: 18px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .contact-form button:hover {
+      background: #e14b4b;
+    }
+
+  </style>
+</head>
+<body>
+
+  
+<header class="navbar-header">
+  <div class="navbar">
+    <a href="index.html" class="logo">
+      <img src="./images/logo.png" alt="ArtistryHub Logo">
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li class="dropdown">
+        <a href="categories.html">Categories ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="paintings.html">Paintings</a></li>
+          <li><a href="artwork.html">Artwork</a></li>
+          <li><a href="digital.html">Digital Art</a></li>
+          <li><a href="sculptures.html">Sculptures</a></li>
+          <li><a href="products.html">Products</a></li>
+        </ul>
+      </li>
+      <li><a href="artists.html">Artists</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="login.html">Login</a></li>
+     
+    </ul>
+
+    <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+  </div>
+</header>
+
+  <!-- Hero Section with Slideshow -->
+  <section class="hero">
+    <div class="slides">
+      <img src="./images/hero1.jpg" class="active" alt="Hero 1">
+      <img src="./images/hero2.jpg" alt="Hero 2">
+      <img src="./images/hero3.jpg" alt="Hero 3">
+    </div>
+    <div class="hero-text">
+      <h1>Contact Us</h1>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact">
+    <!-- Contact Info -->
+    <div class="contact-info">
+      <h2>Get in Touch</h2>
+      <p><strong>Email:</strong> info@artistryhub.com</p>
+      <p><strong>Phone:</strong> +123 456 7890</p>
+      <p><strong>Address:</strong> 123 Art Street, Creativity City</p>
+      <p>We’d love to hear from you! Whether it’s a question, feedback, or partnership opportunity, reach out today.</p>
+    </div>
+
+    <!-- Contact Form -->
+    <div class="contact-form">
+      <h2>Send Us a Message</h2>
+      <form>
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 ArtistryHub. All Rights Reserved.
+  </footer>
+
+  <!-- Slideshow Script -->
+  <script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slides img');
+
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.classList.remove('active');
+        if (i === index) slide.classList.add('active');
+      });
+    }
+
+    function nextSlide() {
+      currentSlide = (currentSlide + 1) % slides.length;
+      showSlide(currentSlide);
+    }
+
+    setInterval(nextSlide, 4000); // changes every 4 seconds
+  </script>
+
+</body>
+</html>
