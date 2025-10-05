@@ -144,69 +144,108 @@ header {
 
 
 
-
-
-
-/* Grid layout */
-.products-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  padding: 20px;
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* Product & Video cards */
-.product-card,
-.video-card {
-  background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  padding: 15px;
+body {
+  font-family: "Poppins", sans-serif;
+  background: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Section */
+.section {
+  padding: 50px 20px;
+  max-width: 1300px;
+  margin: 0 auto;
   text-align: center;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  transition: transform 0.2s ease;
+}
+
+.section h2 {
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+  color: #222;
+}
+
+/* Grid Layout */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+/* Product Card */
+.product-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 350px; /* ✅ Makes all cards the same height */
 }
 
-.product-card:hover,
-.video-card:hover {
-  transform: translateY(-5px);
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
 }
 
-/* Images inside cards */
-.product-card img {
+.product-card img,
+.product-card video {
   width: 100%;
-  height: 180px;   /* ✅ Fixed image height */
+  height: 220px;
   object-fit: cover;
-  border-radius: 8px;
 }
 
-/* Videos inside cards */
-.video-card video {
-  width: 100%;
-  height: 180px;   /* ✅ Matches image height */
-  object-fit: cover;
-  border-radius: 8px;
+.product-card h3 {
+  font-size: 1.1rem;
+  margin: 15px;
+  color: #444;
 }
 
-/* Titles */
-.product-card h3,
+.product-card p {
+  font-size: 0.9rem;
+  margin: 0 15px 15px;
+  color: #666;
+}
+
+/* View Product Button */
+.view-product {
+  display: inline-block;
+  margin: 0 15px 20px;
+  padding: 10px 16px;
+  background: #0077ff;
+  color: #fff;
+  font-size: 0.9rem;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.view-product:hover {
+  background: #0056cc;
+}
+
+/* Special Styling for Video Card */
+.video-card {
+  background: #f1f8ff;
+}
+
 .video-card h3 {
-  margin: 10px 0 5px;
-  font-size: 18px;
+  color: #0056cc;
 }
 
-/* Descriptions */
-.product-card p,
-.video-card p {
-  font-size: 14px;
-  color: #555;
-  margin-bottom: 10px;
-  flex-grow: 1;
-}
+
+
+
+
+
 
 /* View Product button */
 .view-product {
