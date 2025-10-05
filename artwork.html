@@ -61,7 +61,7 @@
 
 
 
-    
+/*     
     .hero {
       position: relative;
       height: 60vh;
@@ -107,7 +107,77 @@
       font-size: 48px;
       font-weight: bold;
     }
+ */
 
+
+
+
+ 
+
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 60vh;
+  overflow: hidden;
+}
+
+.slides {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.slides img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  animation: fade 12s infinite;
+}
+
+/* Show each image in sequence */
+.slides img:nth-child(1) {
+  animation-delay: 0s;
+}
+.slides img:nth-child(2) {
+  animation-delay: 4s;
+}
+.slides img:nth-child(3) {
+  animation-delay: 8s;
+}
+
+@keyframes fade {
+  0%   { opacity: 0; }
+  10%  { opacity: 1; }
+  30%  { opacity: 1; }
+  40%  { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+
+
+
+
+/* Hero text */
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-align: center;
+  background: rgba(0,0,0,0.5);
+  padding: 20px 40px;
+  border-radius: 10px;
+}
+
+.hero-text h1 {
+  font-size: 48px;
+  font-weight: bold;
+}
 
 
 
@@ -201,7 +271,7 @@
 </header>
 
   <!-- Hero Section with Slideshow -->
-   <section class="hero">
+   <!-- <section class="hero">
     <div class="slides">
       <img src="./images/artwork-hero1.jpg" alt="Hero 1">
       <img src="./images/artwork-hero2.jpg" alt="Hero 2">
@@ -210,7 +280,22 @@
     <div class="hero-text">
       <h1>Explore Our Artworks</h1>
     </div>
-  </section> 
+  </section>  -->
+
+
+  <!-- Hero Section -->
+<section class="hero">
+  <div class="slides">
+    <img src="./images/hero1.jpg" alt="Artwork Hero 1">
+    <img src="./images/hero2.jpg" alt="Artwork Hero 2">
+    <img src="./images/hero3.jpg" alt="Artwork Hero 3">
+  </div>
+
+  <div class="hero-text">
+    <h1>Welcome to ArtistryHub</h1>
+    <p>Discover timeless artworks and celebrate creativity</p>
+  </div>
+</section>
 
 
 
