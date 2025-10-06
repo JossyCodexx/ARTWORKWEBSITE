@@ -1,14 +1,17 @@
-// // Hero Image Animation
+// // ✅ Hero Image Animation
 // let heroIndex = 0;
 // const heroImgs = document.querySelectorAll('.hero img');
-// setInterval(() => {
-//   heroImgs[heroIndex].classList.remove('active');
-//   heroIndex = (heroIndex + 1) % heroImgs.length;
-//   heroImgs[heroIndex].classList.add('active');
-// }, 4000);
+// if (heroImgs.length > 0) {
+//   setInterval(() => {
+//     heroImgs[heroIndex].classList.remove('active');
+//     heroIndex = (heroIndex + 1) % heroImgs.length;
+//     heroImgs[heroIndex].classList.add('active');
+//   }, 4000);
+// }
 
 // // ✅ Product Data
 // const products = [
+//   // Paintings, Sculptures, Digital
 //   ...Array.from({ length: 40 }, (_, i) => ({
 //     id: 'a' + (i + 1),
 //     title: `Artwork ${i + 1}`,
@@ -17,62 +20,34 @@
 //     oldPrice: 150 + i * 10,
 //     currency: '$',
 //     vendor: 'ArtistryHub',
-//     images: [`./images/art${(i % 10) + 1}.jpg`]
+//     images: [`images/art${(i % 10) + 1}.jpg`]
 //   })),
 
+//   // Gallery
+//   ...Array.from({ length: 20 }, (_, i) => ({
+//     id: 'g' + (i + 1),
+//     title: `Gallery ${i + 1}`,
+//     category: 'gallery',
+//     price: 200 + i * 5,
+//     oldPrice: 250 + i * 5,
+//     currency: '$',
+//     vendor: 'ArtistryHub',
+//     images: [`images/gallery${(i % 5) + 1}.jpg`]   // ✅ fixed path
+//   })),
 
+//   // Categories
+//   ...Array.from({ length: 20 }, (_, i) => ({
+//     id: 'c' + (i + 1),
+//     title: `Collection ${i + 1}`,
+//     category: 'categories',
+//     price: 180 + i * 7,
+//     oldPrice: 240 + i * 7,
+//     currency: '$',
+//     vendor: 'ArtistryHub',
+//     images: [`images/categories${(i % 5) + 1}.jpg`]  // ✅ fixed path
+//   })),
 
-
-
-//   // ...Array.from({ length: 20 }, (_, i) => ({
-//   //   id: 'g' + (i + 1),
-//   //   title: `Gallery ${i + 1}`,
-//   //   category: 'gallery',
-//   //   price: 200 + i * 5,
-//   //   oldPrice: 250 + i * 5,
-//   //   currency: '$',
-//   //   vendor: 'ArtistryHub',
-//   //   images: [`./images/gallery${(i % 5) + 1}.jpg`]
-//   // })),
-
-//   // ...Array.from({ length: 20 }, (_, i) => ({
-//   //   id: 'c' + (i + 1),
-//   //   title: `Collection ${i + 1}`,
-//   //   category: 'categories',
-//   //   price: 180 + i * 7,
-//   //   oldPrice: 240 + i * 7,
-//   //   currency: '$',
-//   //   vendor: 'ArtistryHub',
-//   //   images: [`./images/categories${(i % 5) + 1}.jpg`]
-//   // })),
-// // Gallery products
-// ...Array.from({ length: 20 }, (_, i) => ({
-//   id: 'g' + (i + 1),
-//   title: `Gallery ${i + 1}`,
-//   category: 'gallery',
-//   price: 200 + i * 5,
-//   oldPrice: 250 + i * 5,
-//   currency: '$',
-//   vendor: 'ArtistryHub',
-//   images: [`images/gallery${(i % 5) + 1}.jpg`]   // ✅ removed ./ for consistency
-// })),
-
-// // Categories products
-// ...Array.from({ length: 20 }, (_, i) => ({
-//   id: 'c' + (i + 1),
-//   title: `Collection ${i + 1}`,
-//   category: 'categories',
-//   price: 180 + i * 7,
-//   oldPrice: 240 + i * 7,
-//   currency: '$',
-//   vendor: 'ArtistryHub',
-//   images: [`images/categories${(i % 5) + 1}.jpg`]  // ✅ removed ./ 
-// })),
-
-
-
-
-
+//   // Artists
 //   ...Array.from({ length: 20 }, (_, i) => ({
 //     id: 'ar' + (i + 1),
 //     title: `By Artist ${i + 1}`,
@@ -81,7 +56,7 @@
 //     oldPrice: 360 + i * 15,
 //     currency: '$',
 //     vendor: `Artist ${i + 1}`,
-//     images: [`./images/artist${(i % 5) + 1}.jpg`]
+//     images: [`images/artist${(i % 5) + 1}.jpg`]  // ✅ fixed path
 //   }))
 // ];
 
@@ -90,16 +65,20 @@
 // const searchInput = document.getElementById('search');
 // const paginationEl = document.createElement('div');
 // paginationEl.id = 'pagination';
-// productsEl.after(paginationEl);
+// if (productsEl) productsEl.after(paginationEl);
 
 // let currentCategory = 'all';
 // let currentPage = 1;
 // const perPage = 20;
 
-// function formatPrice(p) { return p?.toLocaleString(); }
+// function formatPrice(p) {
+//   return p?.toLocaleString();
+// }
 
 // function render(list) {
+//   if (!productsEl) return;
 //   productsEl.innerHTML = '';
+
 //   if (list.length === 0) {
 //     productsEl.innerHTML = '<div style="grid-column:1/-1;color:var(--muted)">No artworks found.</div>';
 //     paginationEl.innerHTML = '';
@@ -142,7 +121,7 @@
 // }
 
 // function filterAndRender() {
-//   const q = searchInput.value.toLowerCase();
+//   const q = searchInput ? searchInput.value.toLowerCase() : '';
 //   const filtered = products.filter(p =>
 //     (currentCategory === 'all' || p.category === currentCategory) &&
 //     (p.title.toLowerCase().includes(q) || p.vendor.toLowerCase().includes(q))
@@ -157,7 +136,7 @@
 //   currentCategory = t.dataset.cat;
 //   filterAndRender();
 // }));
-// searchInput.addEventListener('input', filterAndRender);
+// if (searchInput) searchInput.addEventListener('input', filterAndRender);
 
 // // ✅ Cart
 // let cartItems = [];
@@ -167,7 +146,8 @@
 //   showCartMsg();
 // }
 // function updateCartCount() {
-//   document.getElementById('cart-count').textContent = cartItems.length;
+//   const el = document.getElementById('cart-count');
+//   if (el) el.textContent = cartItems.length;
 // }
 // function showCartMsg() {
 //   let msg = document.getElementById('cart-msg');
@@ -197,6 +177,7 @@
 // let currentMediaIndex = 0, currentMedia = [];
 
 // function openModal(p) {
+//   if (!modal) return;
 //   currentProduct = p;
 //   modalTitle.textContent = p.title;
 //   modalPrice.textContent = p.currency + formatPrice(p.price);
@@ -209,6 +190,7 @@
 //   modal.style.display = 'flex';
 // }
 // function renderMedia() {
+//   if (!mediaContainer) return;
 //   mediaContainer.innerHTML = '';
 //   currentMedia.forEach((src, i) => {
 //     const img = document.createElement('img');
@@ -227,13 +209,19 @@
 // }
 // window.prevMedia = prevMedia;
 // window.nextMedia = nextMedia;
-// modalClose.onclick = () => modal.style.display = 'none';
-// modal.addEventListener('click', e => { if (e.target === modal) modal.style.display = 'none'; });
-// modalAdd.onclick = () => { addToCart(currentProduct) };
-// modalBuy.onclick = () => { window.location.href = `payment.html?id=${currentProduct.id}` };
+// if (modalClose) modalClose.onclick = () => modal.style.display = 'none';
+// if (modal) modal.addEventListener('click', e => { if (e.target === modal) modal.style.display = 'none'; });
+// if (modalAdd) modalAdd.onclick = () => { addToCart(currentProduct) };
+// if (modalBuy) modalBuy.onclick = () => { window.location.href = `payment.html?id=${currentProduct.id}` };
 
 // // ✅ Initial Render
 // filterAndRender();
+
+
+
+
+
+
 
 
 
@@ -273,19 +261,19 @@ if (heroImgs.length > 0) {
 
 // ✅ Product Data
 const products = [
-  // Paintings, Sculptures, Digital
-  ...Array.from({ length: 40 }, (_, i) => ({
-    id: 'a' + (i + 1),
-    title: `Artwork ${i + 1}`,
+  // Index Page Products (22 photos)
+  ...Array.from({ length: 22 }, (_, i) => ({
+    id: 'p' + (i + 1),
+    title: `Product ${i + 1}`,
     category: i % 3 === 0 ? 'paintings' : i % 3 === 1 ? 'sculptures' : 'digital',
     price: 100 + i * 10,
     oldPrice: 150 + i * 10,
     currency: '$',
     vendor: 'ArtistryHub',
-    images: [`images/art${(i % 10) + 1}.jpg`]
+    images: [`images/photos${i + 1}.jpg`]   // ✅ matches index.html images
   })),
 
-  // Gallery
+  // Gallery Products (20 artworks)
   ...Array.from({ length: 20 }, (_, i) => ({
     id: 'g' + (i + 1),
     title: `Gallery ${i + 1}`,
@@ -294,31 +282,7 @@ const products = [
     oldPrice: 250 + i * 5,
     currency: '$',
     vendor: 'ArtistryHub',
-    images: [`images/gallery${(i % 5) + 1}.jpg`]   // ✅ fixed path
-  })),
-
-  // Categories
-  ...Array.from({ length: 20 }, (_, i) => ({
-    id: 'c' + (i + 1),
-    title: `Collection ${i + 1}`,
-    category: 'categories',
-    price: 180 + i * 7,
-    oldPrice: 240 + i * 7,
-    currency: '$',
-    vendor: 'ArtistryHub',
-    images: [`images/categories${(i % 5) + 1}.jpg`]  // ✅ fixed path
-  })),
-
-  // Artists
-  ...Array.from({ length: 20 }, (_, i) => ({
-    id: 'ar' + (i + 1),
-    title: `By Artist ${i + 1}`,
-    category: 'artists',
-    price: 300 + i * 15,
-    oldPrice: 360 + i * 15,
-    currency: '$',
-    vendor: `Artist ${i + 1}`,
-    images: [`images/artist${(i % 5) + 1}.jpg`]  // ✅ fixed path
+    images: [`images/art-thumbnail${i + 1}.jpg`]   // ✅ matches gallery.html images
   }))
 ];
 
