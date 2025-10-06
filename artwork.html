@@ -61,53 +61,6 @@
 
 
 
-/*     
-    .hero {
-      position: relative;
-      height: 60vh;
-      overflow: hidden;
-    }
-
-    .slides {
-      display: flex;
-      width: 300%;
-      height: 100%;
-      animation: slide 12s infinite;
-    }
-
-    .slides img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    @keyframes slide {
-      0% { transform: translateX(0); }
-      30% { transform: translateX(0); }
-      35% { transform: translateX(-100%); }
-      65% { transform: translateX(-100%); }
-      70% { transform: translateX(-200%); }
-      95% { transform: translateX(-200%); }
-      100% { transform: translateX(0); }
-    }
-
-    .hero-text {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      color: #fff;
-      text-align: center;
-      background: rgba(0,0,0,0.5);
-      padding: 20px 40px;
-      border-radius: 10px;
-    }
-
-    .hero-text h1 {
-      font-size: 48px;
-      font-weight: bold;
-    }
- */
 
 
 
@@ -240,16 +193,18 @@
 <body>
 
  
+<!-- Navbar -->
 <header class="navbar-header">
   <div class="navbar">
     <a href="index.html" class="logo">
       <img src="./images/logo.png" alt="ArtistryHub Logo">
     </a>
 
-    <ul class="nav-links">
+    <ul class="nav-links" id="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="gallery.html">Gallery</a></li>
+
       <li class="dropdown">
         <a href="categories.html">Categories ▾</a>
         <ul class="dropdown-menu">
@@ -260,27 +215,20 @@
           <li><a href="products.html">Products</a></li>
         </ul>
       </li>
+
       <li><a href="artists.html">Artists</a></li>
       <li><a href="contact.html">Contact</a></li>
       <li><a href="login.html">Login</a></li>
-     
     </ul>
 
-    <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+    <div class="menu-toggle" id="menu-toggle">
+      <i class="fas fa-bars"></i>
+    </div>
   </div>
 </header>
 
-  <!-- Hero Section with Slideshow -->
-   <!-- <section class="hero">
-    <div class="slides">
-      <img src="./images/artwork-hero1.jpg" alt="Hero 1">
-      <img src="./images/artwork-hero2.jpg" alt="Hero 2">
-      <img src="./images/artwork-hero3.jpg" alt="Hero 3">
-    </div>
-    <div class="hero-text">
-      <h1>Explore Our Artworks</h1>
-    </div>
-  </section>  -->
+
+
 
 
   <!-- Hero Section -->
@@ -501,5 +449,6 @@
   </div>
 </footer>
 
+<script src="./Js/artwork.js"></script>
 </body>
 </html>

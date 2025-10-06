@@ -58,63 +58,24 @@
 
 
 
-
-
-
-    /* Gallery Section */
-    /* .gallery {
-      max-width: 1200px;
-      margin: 50px auto;
-      padding: 0 20px;
-    }
-
-    .gallery h2 {
-      text-align: center;
-      font-size: 36px;
-      margin-bottom: 30px;
-      color: #ff5c5c;
-    }
-
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-
-    .gallery-card {
-      background: #fff;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .gallery-card img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-    }
-
-    .gallery-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 6px 14px rgba(0,0,0,0.15);
-    } */
-
   </style>
 </head>
 <body>
 
-  
+ 
+
+<!-- Navbar -->
 <header class="navbar-header">
   <div class="navbar">
     <a href="index.html" class="logo">
       <img src="./images/logo.png" alt="ArtistryHub Logo">
     </a>
 
-    <ul class="nav-links">
+    <ul class="nav-links" id="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="gallery.html">Gallery</a></li>
+
       <li class="dropdown">
         <a href="categories.html">Categories ▾</a>
         <ul class="dropdown-menu">
@@ -125,15 +86,23 @@
           <li><a href="products.html">Products</a></li>
         </ul>
       </li>
+
       <li><a href="artists.html">Artists</a></li>
       <li><a href="contact.html">Contact</a></li>
       <li><a href="login.html">Login</a></li>
-     
     </ul>
 
-    <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+    <div class="menu-toggle" id="menu-toggle">
+      <i class="fas fa-bars"></i>
+    </div>
   </div>
 </header>
+
+
+
+
+
+
   <!-- Hero Section with Slideshow -->
   <section class="hero">
     <div class="slides">

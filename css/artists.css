@@ -1,3 +1,11 @@
+
+ body {
+  font-family: 'Poppins', sans-serif;
+} 
+
+
+
+
 /* ===== RESET ===== */
 * {
   margin: 0;
@@ -6,18 +14,17 @@
 }
 
 body {
-  font-family: 'Poppins', Arial, sans-serif;
-  background: #f4f4f4;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-/* ===== NAVBAR ===== */
+/* ===== NAVBAR CONTAINER ===== */
 header {
   width: 100%;
-  background: #fff;
+  background: #fff; /* White background */
   position: sticky;
   top: 0;
   z-index: 1000;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #ddd; /* subtle separator */
 }
 
 .navbar {
@@ -29,6 +36,7 @@ header {
   align-items: center;
 }
 
+/* ===== LOGO ===== */
 .logo img {
   height: 50px;
   width: auto;
@@ -47,7 +55,7 @@ header {
 }
 
 .nav-links a {
-  color: #111;
+  color: #111; /* Black text */
   text-decoration: none;
   padding: 0.5rem;
   font-weight: 500;
@@ -55,7 +63,7 @@ header {
 }
 
 .nav-links a:hover {
-  color: #007bff;
+  color: #f39c12; /* Yellow hover */
 }
 
 /* ===== DROPDOWN MENU ===== */
@@ -64,13 +72,12 @@ header {
   position: absolute;
   top: 100%;
   left: 0;
-  background: #f9f9f9;
+  background: #fff;
   min-width: 180px;
   list-style: none;
   border-radius: 4px;
   overflow: hidden;
-  border: 1px solid #ddd;
-  z-index: 100;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 .dropdown-menu li a {
@@ -81,10 +88,11 @@ header {
 }
 
 .dropdown-menu li a:hover {
-  background: #007bff;
+  background: #f39c12;
   color: #fff;
 }
 
+/* Show dropdown on hover (desktop) */
 .dropdown:hover .dropdown-menu {
   display: block;
 }
@@ -93,9 +101,49 @@ header {
 .menu-toggle {
   display: none;
   font-size: 1.8rem;
-  color: #111;
+  color: #111; /* Black bars */
   cursor: pointer;
 }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: #fff;
+    flex-direction: column;
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+
+  .nav-links.show {
+    max-height: 500px; /* expand menu */
+  }
+
+  .nav-links li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .dropdown-menu {
+    position: static;
+    background: #fff;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .dropdown.open .dropdown-menu {
+    display: block; /* dropdowns open on click */
+  }
+
+  .menu-toggle {
+    display: block; /* show bars on mobile */
+  }
+}
+
 
 
 
